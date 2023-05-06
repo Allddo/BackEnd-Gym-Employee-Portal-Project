@@ -74,4 +74,10 @@ public class Controller {
              return employeeRepository.findByUsername(username);
          }
     }
+
+    @DeleteMapping("/employee/{username}")
+    void deleteEmployeeByUsername(@PathVariable String username){
+         employeeRepository.deleteByUsername(username);
+    }
+
 }
